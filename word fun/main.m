@@ -11,7 +11,7 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         while (true) {
-            printf("uppercase, lowercase, canadianize \n");
+            printf("uppercase, lowercase, canadianize, word count \n");
             char inputChars[255];
             printf("input a string: ");
             fgets(inputChars, 255, stdin);
