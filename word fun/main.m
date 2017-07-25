@@ -23,16 +23,18 @@ int main(int argc, const char * argv[]) {
             NSLog(@"Lowercase: %@",[inputString lowercaseString]);
             NSLog(@"Convert to number(?) %d",[inputString intValue]);
             NSLog(@"Canadianize: %@",[inputString stringByAppendingString:@", eh?"]);
-            if ([inputString hasSuffix:@"!"])
+            if ([inputString containsString:@"!"])
             {
                 NSLog(@"Woah, calm down!");
             }
-            else if ([inputString hasSuffix:@"?"])
+            else if ([inputString containsString:@"?"])
             {
                 NSLog(@"I don't know");
             }
             else NSLog(@"%@", inputString);
-      
+            NSString *despacingString = [inputString stringByReplacingOccurrencesOfString:@" " withString:@"-"];
+            NSLog(@"%@", despacingString);
+        
         }
     }
     return 0;
