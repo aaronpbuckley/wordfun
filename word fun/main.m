@@ -34,6 +34,9 @@ int main(int argc, const char * argv[]) {
             else NSLog(@"%@", inputString);
             NSString *despacingString = [inputString stringByReplacingOccurrencesOfString:@" " withString:@"-"];
             NSLog(@"%@", despacingString);
+            
+            NSArray<NSString *> *arrayString = [inputString componentsSeparatedByString:@" "];
+            NSLog(@"word count is %lu", (unsigned long)arrayString.count);
         
         }
     }
